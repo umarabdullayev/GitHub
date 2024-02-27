@@ -1,12 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
-<body>
-    
+
+<body id="body">
+    <header class="header">
+        <div class="nav__container">
+            <div class="container__menu">
+                <div class="off-screen-menu">
+                    <ul>
+                        <li>home</li>
+                        <li>about</li>
+                        <li>contact</li>
+                        <li>home</li>
+                        <li>about</li>
+                        <li>contact</li>
+                        <li>home</li>
+                        <li>about</li>
+                        <li>contact</li>
+                    </ul>
+                </div>
+                <div class="ham__border">
+                    <div class="ham-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="logo__img">
+                    <img src="./github-seeklogo.svg" alt="">
+                </div>
+                <div class="dashboard" id="dashboard">
+                    <ul>
+                        <li>
+                            <a href="">Dashboard</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container__seorch">
+                <div class="input_bar" id="inp">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Type to seorch">
+                    <div class="border"></div>
+                    <div class="right_cube">
+                        <i class="fa-solid fa-angle-right">_</i>
+                    </div>
+
+                </div>
+                <div class="bar" id="bar">
+                    <div class="input__type">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="">
+                    </div>
+                </div>
+
+                <div class="border">
+
+                </div>
+                <div class="icon__bar">
+                    <div class="item">
+                        <i class="fa-solid fa-plus"></i>
+                        <i class="fa-solid fa-sort-down" id="iconDown"></i>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-compact-disc"></i>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-code-pull-request"></i>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-inbox"></i>
+                    </div>
+                    <div class="acount"></div>
+                    <div class="item__menu" id="item__menu"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script src="./main.js"></script>
 </body>
+
 </html>

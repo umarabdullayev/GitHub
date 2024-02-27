@@ -1,1 +1,267 @@
 @import './global';
+
+.header{
+    // position: relative;
+    width: 1536px;
+    height: 60px;
+    border: 1px solid;
+    margin: 0 auto;
+    background-color: #0d1117;
+    .nav__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 98%;
+        height: 100%;
+        border: 1px solid;
+        margin: 0 auto;
+        .container__menu{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 14%;
+            height: 100%;
+            .off-screen-menu {
+                z-index: 2;
+                background-color: rgb(34, 37, 49);
+                height: 100vh;
+                width: 100%;
+                max-width: 300px;
+                position: fixed;
+                top: 0;
+                right: -500px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                font-size: 3rem;
+                transition: .3s ease;
+            }
+            
+            .off-screen-menu.active {
+                right: 0;
+            }
+
+            .ham__border{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid rgb(156, 156, 156);
+                width: 33px;
+                height: 35px;
+                border-radius: 5px;
+                .ham-menu {
+                    height: 22px;
+                    width: 20px;
+                    // margin-left: auto;
+                    position: relative;
+                    span {
+                        height: 2px;
+                        width: 100%;
+                        background-color: rgb(189, 188, 188);
+                        border-radius: 25px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        transition: .3s ease;
+                    
+                    }
+                    span:nth-child(1) {
+                        top: 25%;
+                    }
+                    span:nth-child(2) {
+                        top: 75%;
+                    }
+                }
+            }
+            .ham__border:hover{
+                border-color: #fff;
+            }
+            .logo__img{
+                width: 35px;
+                height: 40px;
+                opacity: 0.8;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .dashboard{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                width: 100px;
+                ul{
+                    display: flex;
+                    align-items: center;
+                    width: 80px;
+                    height: 100%;
+                    li{
+                        display: flex;
+                        align-items: center;
+                        width: 100%;
+                        height: 100%;
+                        a{
+                           font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                            font-weight: 600;
+                            font-size: 16px;
+                            color: white;
+                        }
+                        
+                    }
+                }
+            }
+
+            
+        }
+        .container__seorch{
+            
+            display: flex;
+            align-items: center;
+            width: 40%;
+            height: 33px;
+            .input_bar{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 350px;
+                height: 100%;
+                border: 1px solid  rgb(183, 183, 183);
+                color: white;
+                border-radius: 8px;
+                i{
+                    color: rgb(142, 141, 141);
+                    padding: 0 7px;
+
+                }
+                input{
+                    width: 300px;
+                    height: 30px;
+                    border: none;
+                    outline: none;
+                    background: none;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    font-size: 16px;
+                    color: rgb(142, 141, 141);  
+                }
+                .border{
+                    width: 20px;
+                    border: 0.1px solid white;
+                    transform: rotate(90deg);
+                }
+                .right_cube{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 40px;
+                    height: 40px;
+                }
+                .right_cube:hover{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 35px;
+                    height: 35px;
+                    background-color: rgb(128, 128, 128, 0.3);
+                    border-radius: 10px;
+                }
+            }
+            .bar{
+                z-index: 1s;
+                position: absolute;
+                top: 0;
+                right: 35%;
+                width: 1200px;
+                height: 500px;
+                background-color: rgb(31, 31, 31);
+                border-radius: 10px;
+                display: none;
+                .input__type{
+                    display: flex;
+                    align-items: center;
+                    width: 98%;
+                    height: 35px;
+                    margin: 0 auto;
+                    border: 3px solid rgb(52, 106, 232);
+                    border-radius: 8px;
+                    margin-top: 10px;
+                    z-index: 1;
+                    i{
+                        color: #fff;
+                        padding: 0 0 0 5px;
+                    }
+                    input{
+                        width: 97%;
+                        height: 100%;
+                        background: none;
+                        border: none;
+                        outline: none;
+                        color: white;
+                        padding: 0 0 0 5px;
+
+                    }
+                }
+            }
+            .border{
+                width: 20px;
+                border:1px solid white;
+                transform: rotate(90deg);
+            }
+            .icon__bar{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 260px;
+                height: 35px;
+                .item{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 35px;
+                    height: 100%;
+                    border: 1px solid rgb(183, 183, 183);
+                    border-radius: 8px;
+                    
+                    i{
+                        color: rgb(183, 183, 183);
+                            
+                    }
+                }
+                .item:hover{
+                    border-color: white;
+                    background: rgb(128, 128, 128 ,0.2);
+                }
+                :nth-child(1){
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    width: 50px;
+                    i{
+                        padding: 0 5px 0 5px;
+                    }
+                }
+                .acount{
+                    width: 40px;
+                    height: 40px;
+                    border: 1px solid white;
+                    border-radius: 50%;
+                    background-color: aqua;
+                }
+                .item__menu{
+                    display: none;
+                    position: absolute;
+                    top: 105%;
+                    right: 80%;
+                    width: 200px;
+                    height: 250px;
+                    border-radius: 8px;
+                    background: rgba(27, 31, 35, );
+                }
+            }
+        }
+    }
+}
